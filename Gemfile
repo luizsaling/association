@@ -51,9 +51,7 @@ gem "devise-i18n"
 gem "devise-bootstrap5"
 
 gem 'faker'
-
 gem 'rails_performance'
-
 gem 'will_paginate', '~> 4.0'
 
 group :development, :test do
@@ -81,5 +79,3 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'faker'
-gem 'rails_performance'
