@@ -25,7 +25,7 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to payment_url(@payment), notice: "Payment was successfully created." }
+        format.html { redirect_to payment_url(@payment), notice: "Pagamento Criado." }
         format.json { render :show, status: :created, location: @payment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class PaymentsController < ApplicationController
   def update
     respond_to do |format|
       if @payment.update(payment_params)
-        format.html { redirect_to payment_url(@payment), notice: "Payment was successfully updated." }
+        format.html { redirect_to payment_url(@payment), notice: "Pagamento Atualizado." }
         format.json { render :show, status: :ok, location: @payment }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class PaymentsController < ApplicationController
     @payment.destroy!
 
     respond_to do |format|
-      format.html { redirect_to payments_url, notice: "Payment was successfully destroyed." }
+      format.html { redirect_to payments_url, notice: "Pagamento removido." }
       format.json { head :no_content }
     end
   end
