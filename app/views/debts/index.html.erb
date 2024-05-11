@@ -12,6 +12,8 @@
   Novo débito
 <% end %>
 
+<%= will_paginate @debts %>
+
 <div id="debts">
 <div class="table-responsive">
   <table class="table table-striped">
@@ -41,3 +43,5 @@
     </tbody>
   </table>
 </div>
+
+<%= will_paginate @debts %>
