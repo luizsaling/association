@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relatório de Saldo</title>
+</head>
+<body>
+  <h1>Relatório de Saldo</h1>
+  <p>Olá <%= @user.email %>,</p>
+  <p>Aqui está o seu relatório de saldo:</p>
+  
+  <ul>
+    <% @people.each do |person| %>
+      <li><%= person.name %> - Saldo: <%= person.balance %></li>
+    <% end %>
+  </ul>
+</body>
+</html>

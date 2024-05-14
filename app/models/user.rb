@@ -6,3 +6,13 @@ class User < ApplicationRecord
 
   has_many :people, dependent: :nullify
 end
+
+class User < ApplicationRecord
+  devise :database_authenticatable, :recoverable, :rememberable, :validatable
+
+  has_many :people, dependent: :nullify
+
+  def name
+    email 
+  end
+end
