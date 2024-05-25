@@ -1,7 +1,12 @@
+require 'sidekiq'
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   get 'dashboard/index'
   resources :payments
   devise_for :users
+
+  mount Sidekiq::Web => '/sidekiq'
 
   resources :debts, except: %i(edit update show)
 

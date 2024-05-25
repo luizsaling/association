@@ -83,4 +83,4 @@ group :test do
 end
 
 
-gem "sidekiq", "~> 7.2"
+gem 'sidekiq', '~> 6.5.7'
